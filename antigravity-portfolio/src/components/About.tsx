@@ -152,7 +152,7 @@ export default function About() {
               </h3>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                 {[
-                  { value: "5+", label: "Years Experience", color: "#00d4ff" },
+                  { value: "4+", label: "Years Experience", color: "#00d4ff" },
                   { value: "20+", label: "AI Projects Shipped", color: "#7c3aed" },
                   { value: "10+", label: "LLM Pipelines Built", color: "#06ffa5" },
                   { value: "4+", label: "AI Frameworks", color: "#00d4ff" },

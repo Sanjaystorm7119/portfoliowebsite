@@ -54,22 +54,22 @@ export const experience = [
     role: "Gen AI Engineer",
     company: "HireAva by StelleHire ",
     period: "Apr 2025 – Present",
-    description: "Architecting and deploying production Gen AI systems — RAG pipelines, agentic workflows, and LLM observability platforms for enterprise clients.",
+    description: "Developed conversation Ai interviewing platform. Architecting and deploying production Gen AI systems — RAG pipelines, agentic workflows, and LLM observability platforms for enterprise clients.",
     tech: ["LangChain", "LangGraph", "LangSmith", "Python", "Docker"],
   },
   {
     role: "Software Developer ",
     company: "TVS Credit",
-    period: "Jul 2024 – Apr 2025",
+    period: "Jun 2023 – Apr 2025",
     description: "Developed and maintained features for various communication channel applications including SMS , WA , Email",
     tech: ["SQL", "PL/SQL", "FastAPI", "PostgreSQL","Reactjs"],
   },
   {
     role: "SDE Trainee",
     company: "Upgrad Knowledgehut",
-    period: "Mar 2022 – 2023",
-    description: "Developed ETL pipelines and REST APIs powering data ingestion for ML training platforms, focusing on scalability and data quality.",
-    tech: ["Python", "FastAPI", "Docker", "Airflow", "SQL"],
+    period: "Mar 2022 – Apr 2023",
+    description: ".",
+    tech: ["Reactjs", "MongoDB", "Javascript", "expressjs", "nodejs"],
   },
   // {
   //   role: "Forntend Developer",
@@ -83,7 +83,7 @@ export const experience = [
     company: "Saveetha Engineering College",
     // period: "2016 – 2020",
     description: "Bachelor of Technology in Information Technology",
-    tech: ["Python", "Algorithms", "C++", "System Design"],
+    tech: ["Python", "Algorithms", "javascript","Java", "System Design","networking","compiler design", "data structures"],
   },
 ];
 
