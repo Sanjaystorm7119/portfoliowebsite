@@ -6,10 +6,13 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 
+import AIAgent from "@/components/AIAgent";
+
 export default function Home() {
   return (
     <>
       <CustomCursor />
+      <AIAgent />
       <Navbar />
       <main>
         <Hero />
