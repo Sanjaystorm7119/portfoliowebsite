@@ -246,21 +246,17 @@ export default function Hero() {
                 overflow: "hidden",
               }}>
                 {/* Avatar placeholder */}
-                <div style={{
-                  width: 250, height: 250, borderRadius: "50%",
-                  background: "linear-gradient(135deg, #1a1a1a, #0a0a0a)",
-                  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-                  border: "1px solid rgba(255,255,255,0.05)",
-                }}>
-                  <div style={{ fontSize: "5rem", lineHeight: 1 }}>⚡</div>
-                  <div style={{
-                    marginTop: "0.5rem", fontSize: "0.85rem", fontWeight: 700,
-                    background: "linear-gradient(135deg, #00d4ff, #7c3aed)",
-                    WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                  }}>
-                    Sanjay B
-                  </div>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Gemini_Generated_Image.png"
+                  alt="Sanjay B"
+                  style={{
+                    width: 250, height: 250, borderRadius: "50%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    border: "2px solid rgba(0,212,255,0.2)",
+                  }}
+                />
               </div>
 
               {/* Floating badges */}
