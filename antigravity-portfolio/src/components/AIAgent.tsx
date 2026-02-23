@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bot, X, Terminal, Sparkles, Send, Command } from "lucide-react";
+import { Bot, X, Terminal, Send, Command } from "lucide-react";
 
 const commands = {
   "/who": "Sanjay B – A Gen AI Engineer building production-grade RAG pipelines and agentic workflows.",
