@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-cyan: #00d4ff;
+  --accent-violet: #7c3aed;
+  --accent-green: #06ffa5;
+  --border: rgba(255, 255, 255, 0.08);
+  --glow-cyan: rgba(0, 212, 255, 0.3);
+  --glow-violet: rgba(124, 58, 237, 0.3);
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #f1f5f9;
+  --text-primary: #000000;
+  --text-secondary: #6b7280;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  cursor: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--accent-cyan), var(--accent-violet));
+  border-radius: 3px;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s,
+    height 0.2s,
+    background 0.2s;
+  mix-blend-mode: difference;
+  box-shadow:
+    0 0 15px var(--accent-cyan),
+    0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent-cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.12s ease-out,
+    width 0.2s,
+    height 0.2s,
+    opacity 0.2s;
+  opacity: 0.5;
+}
+
+.cursor-trail.hovered {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  border-color: var(--accent-violet);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* AntiGravity Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--accent-violet),
+    var(--accent-green)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 20px var(--glow-cyan);
+}
+
+/* Section Styles */
+.section {
+  padding: 6rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Card glow */
+.card-glow:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+/* Neon divider */
+.neon-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-cyan),
+    var(--accent-violet),
+    transparent
+  );
+  opacity: 0.4;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Skills badges */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 12px var(--glow-cyan);
+  transform: translateY(-2px);
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Floating badge */
+.floating-badge {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--glow-cyan);
+  }
+  50% {
+    box-shadow:
+      0 0 40px var(--glow-cyan),
+      0 0 60px var(--glow-violet);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Nav glass */
+.nav-glass {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.light .nav-glass {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Timeline */
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--accent-cyan),
+    var(--accent-violet),
+    transparent
+  );
+}
+
+/* Section heading */
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 0.75rem;
+}
