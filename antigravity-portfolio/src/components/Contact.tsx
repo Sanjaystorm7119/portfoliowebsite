@@ -86,9 +86,9 @@ export default function Contact() {
               }}>
                 {item.icon}
               </div>
-              <div>
+              <div style={{ minWidth: 0, flex: 1 }}>
                 <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)", fontWeight: 500, marginBottom: "0.2rem" }}>{item.label}</div>
-                <div style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 600 }}>{item.value}</div>
+                <div style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 600, wordBreak: "break-all" }}>{item.value}</div>
               </div>
             </motion.div>
           ))}
