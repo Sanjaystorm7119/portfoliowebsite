@@ -52,7 +52,7 @@ export const projects = [
 export const experience = [
   {
     role: "Gen AI Engineer",
-    company: "HireAva by StelleHire ",
+    company: "HireEva by StelleHire ",
     period: "Apr 2025 – Present",
     description: "Developed conversation Ai interviewing platform. Architecting and deploying production Gen AI systems — RAG pipelines, agentic workflows, and LLM observability platforms for enterprise clients.",
     tech: ["LangChain", "LangGraph", "LangSmith", "Python", "Docker"],
