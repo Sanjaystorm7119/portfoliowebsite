@@ -55,7 +55,7 @@ export const experience = [
     company: "HireEva by StelleHire ",
     period: "Apr 2025 – Present",
     description: "Developed conversation Ai interviewing platform. Architecting and deploying production Gen AI systems — RAG pipelines, agentic workflows, and LLM observability platforms for enterprise clients.",
-    tech: ["LangChain", "LangGraph", "LangSmith", "Python", "Docker"],
+    tech: ["LangChain", "LangGraph", "LangSmith", "Python", "Docker","multi-agent orchestration"],
   },
   {
     role: "Software Developer ",
